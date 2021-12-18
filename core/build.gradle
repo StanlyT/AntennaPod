@@ -1,6 +1,7 @@
 apply plugin: "com.android.library"
 apply from: "../common.gradle"
 apply from: "../playFlavor.gradle"
+apply plugin: 'kotlin-android'
 
 android {
     lintOptions {
@@ -77,4 +78,8 @@ dependencies {
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
     androidTestImplementation "androidx.test:runner:$runnerVersion"
     androidTestImplementation "androidx.test:rules:$rulesVersion"
+
+    androidTestImplementation "com.kaspersky.android-components:kaspresso:$kaspressoVersion"
+    implementation "androidx.core:core-ktx:$androidXCore"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
